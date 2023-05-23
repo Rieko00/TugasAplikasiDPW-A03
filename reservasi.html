@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <title>Resort</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">Resort</div>
+      <ul class="navbar-link">
+        <li class="navbar-item"><a href="#">Home</a></li>
+        <li class="navbar-item"><a href="#">About</a></li>
+        <li class="navbar-item"><a href="#">Fasilitas</a></li>
+        <li class="navbar-item"><a href="#">Reservasi</a></li>
+      </ul>
+    </nav>
+    <div class="form-reservasi">
+      <div class="form-container">
+        <header class="form-header">Reservasi</header>
+        <form action="#" method="post">
+          <div class="form-title">
+            <span class="form-details">Personal Detail</span>
+            <div class="form-fields">
+              <div class="input-field">
+                <label for="name">Nama Lengkap</label>
+                <input type="text" name="name" id="name" placeholder="Masukan Nama Anda" />
+              </div>
+              <div class="input-field">
+                <label for="name">Email</label>
+                <input type="text" name="email" id="email" placeholder="Email" />
+              </div>
+              <div class="input-field">
+                <label for="name">Nomor Telepon</label>
+                <input type="text" name="telepon" id="telepon" placeholder="Nomor Telepon" />
+              </div>
+              <div class="input-field">
+                <label>Nationality</label>
+                <select>
+                  <option disabled selected>Select nationality</option>
+                  <option>WNI</option>
+                  <option>WNA / Asing</option>
+                </select>
+              </div>
+              <div class="input-field">
+                <label>Id type</label>
+                <select>
+                  <option disabled selected>Select Id Type</option>
+                  <option>Identity Card</option>
+                  <option>Driver Lisence</option>
+                  <option>Pasport</option>
+                  <option>Others</option>
+                </select>
+              </div>
+              <div class="input-field">
+                <label for="id-num">ID number</label>
+                <input type="text" name="id-num" id="id-num" placeholder="Enter ID Number" />
+              </div>
+            </div>
+          </div>
+          <div class="form-title">
+            <span class="form-details">Book Detail</span>
+            <div class="form-fields">
+              <div class="input-field">
+                <label for="room-type">Room Type</label>
+                <select>
+                  <option disabled selected>Select Room Type</option>
+                  <option>Room 1</option>
+                  <option>Room 2</option>
+                  <option>Room 3</option>
+                  <option>Room 4</option>
+                </select>
+              </div>
+              <div class="input-field">
+                <label>Check-in</label>
+                <input type="date" />
+              </div>
+              <div class="input-field">
+                <label>Check-out</label>
+                <input type="date" />
+              </div>
+              <div class="input-field">
+                <label>Additional Service</label>
+                <select>
+                  <option disabled selected>Select Additional Service</option>
+                  <option>accomodation only</option>
+                  <option>Breakfast set</option>
+                  <option>Premium Service</option>
+                </select>
+              </div>
+              <div class="input-field">
+                <label>Id type</label>
+                <select>
+                  <option disabled selected>Select Id Type</option>
+                  <option>Identity Card</option>
+                  <option>Driver Lisence</option>
+                  <option>Pasport</option>
+                  <option>Others</option>
+                </select>
+              </div>
+              <div class="input-field">
+                <label for="id-num">ID number</label>
+                <input type="text" name="id-num" id="id-num" placeholder="Enter ID Number" />
+              </div>
+              <div class="button">
+                <a class="btn-primary" href="index.html">Kembali Ke Halaman Utama</a>
+                <button class="btn btn-primary" type="reset">Reset</button>
+                <button class="btn btn-primary" type="submit">Kirim</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

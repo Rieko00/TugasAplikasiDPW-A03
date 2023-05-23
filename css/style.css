@@ -1,0 +1,287 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  font-family: merri;
+  src: url(../font/Merriweather-Regular.ttf);
+}
+@font-face {
+  font-family: bebasNeue;
+  src: url(../font/BebasNeue-Regular.ttf);
+}
+@font-face {
+  font-family: dancingScript;
+  src: url(../font/DancingScript-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: montserrat;
+  src: url(../font/Montserrat-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: pacifico;
+  src: url(../font/Pacifico-Regular.ttf);
+}
+
+@font-face {
+  font-family: poppins;
+  src: url(../font/Poppins-Regular.ttf);
+}
+
+body {
+  font-family: poppins, Verdana, Geneva, Tahoma, sans-serif;
+  background-color: #f5f3f4;
+}
+
+nav {
+  display: flex;
+  background-color: #f5f3f4;
+  justify-content: space-around;
+  padding: 20px 0;
+  max-height: 70px;
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  bottom: auto;
+  align-items: center;
+}
+
+.logo {
+  letter-spacing: 3px;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.navbar-link-container {
+  min-width: 40%;
+}
+
+.navbar-link {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+}
+
+nav ul li a {
+  color: brown;
+  font-size: 1rem;
+}
+
+#header-img {
+  background-image: url(../image/homepage-image.jpg);
+  background-color: rgb(0, 0, 0, 0.66);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+}
+
+.header-background {
+  display: flex;
+  height: 100vh;
+  min-height: 600px;
+  width: 100%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.header-container {
+  width: 90%;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: block;
+  transition: 0.5s;
+}
+
+.title {
+  font-size: 2rem;
+  line-height: 80px;
+  font-weight: 500;
+}
+
+.title-desc {
+  font-size: 1rem;
+  line-height: 25px;
+  font-weight: 500;
+}
+
+.about-us {
+  display: flex;
+  justify-content: center;
+  min-height: 600px;
+}
+
+.about-container {
+  width: 90%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer {
+  display: flex;
+  min-height: 400px;
+  background-color: #99a98f;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.footer-container {
+  display: flex;
+  padding: 3% 5%;
+  height: 350px;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.footer-sizing {
+  width: calc(100% / 3);
+}
+
+.footer-contact {
+  margin-right: 10px;
+  border-right: 1px solid black;
+  color: black;
+}
+
+.footer-links {
+  margin-left: 10px;
+  border-right: 1px solid black;
+  color: black;
+}
+
+.footer-socialmed {
+  margin-left: 10px;
+  color: black;
+}
+
+.footer-credit {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  background-color: #537188;
+}
+
+.credit-container {
+  display: flex;
+  padding-left: 5%;
+  align-items: center;
+}
+
+.form-reservasi {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form-container {
+  background-color: blue;
+  max-width: 900px;
+  width: 100%;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 3rem 1rem;
+  color: white;
+}
+
+.form-header {
+  font-weight: 600;
+  font-size: 2rem;
+}
+
+.form-header::before {
+  content: "";
+  position: absolute;
+  left: auto;
+  top: 185px;
+  height: 3px;
+  width: 27px;
+  border-radius: 8px;
+  background-color: #ffffff;
+}
+
+.form-container form {
+  position: relative;
+  margin: 1rem 0;
+  min-height: 500px;
+}
+
+.form-title {
+  margin-top: 2rem;
+}
+
+.form-details {
+  font-weight: 500;
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.form-fields {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.input-field {
+  display: flex;
+  width: calc(100% / 3 - 15px);
+  flex-direction: column;
+  margin: 8px 0;
+}
+
+.input-field label {
+  font-size: 12px;
+  font-weight: 500;
+  color: white;
+}
+
+.input-field input,
+select {
+  height: 2.5rem;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #333;
+  margin-top: 5px;
+  padding: 0 10px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+.button {
+  margin-top: 1.5rem;
+  display: flex;
+}
+.btn-primary {
+  background-color: #0070f1;
+  color: white;
+  margin-right: 10px;
+  border-style: none;
+  border-radius: 5px;
+  padding: 15px 20px;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.btn-primary:hover {
+  transition: 0.3s linear;
+  color: white;
+  background-color: #ed1a60;
+  border-radius: 5px;
+  padding: 15px 20px;
+}
