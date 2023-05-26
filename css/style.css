@@ -35,6 +35,16 @@ html {
   src: url(../font/Poppins-Regular.ttf);
 }
 
+@font-face {
+  font-family: futuraNew;
+  src: url(../font/FuturaTSNew.ttf);
+}
+
+@font-face {
+  font-family: openSans;
+  src: url(../font/OpenSans.ttf);
+}
+
 body {
   font-family: poppins, Verdana, Geneva, Tahoma, sans-serif;
   background-color: #f5f3f4;
@@ -119,7 +129,7 @@ nav ul li a {
 .about-us {
   display: flex;
   justify-content: center;
-  min-height: 600px;
+  min-height: 50vh;
 }
 
 .about-container {
@@ -132,7 +142,7 @@ nav ul li a {
 .footer {
   display: flex;
   min-height: 400px;
-  background-color: #99a98f;
+  background-color: #4a272e;
   justify-content: space-between;
   flex-direction: column;
 }
@@ -154,26 +164,27 @@ nav ul li a {
 
 .footer-contact {
   margin-right: 10px;
-  border-right: 1px solid black;
-  color: black;
+  border-right: 1px solid #f5f3f4;
+  color: #f5f3f4;
 }
 
 .footer-links {
   margin-left: 10px;
-  border-right: 1px solid black;
-  color: black;
+  margin-right: 10px;
+  border-right: 1px solid #f5f3f4;
+  color: #f5f3f4;
 }
 
 .footer-socialmed {
   margin-left: 10px;
-  color: black;
+  color: #f5f3f4;
 }
 
 .footer-credit {
   height: 50px;
   display: flex;
   align-items: center;
-  background-color: #537188;
+  background-color: #696d77;
 }
 
 .credit-container {
@@ -268,7 +279,7 @@ select {
   display: flex;
 }
 .btn-primary {
-  background-color: #0070f1;
+  background-color: #ae825d;
   color: white;
   margin-right: 10px;
   border-style: none;
@@ -281,7 +292,78 @@ select {
 .btn-primary:hover {
   transition: 0.3s linear;
   color: white;
-  background-color: #ed1a60;
+  background-color: #4a272e;
   border-radius: 5px;
   padding: 15px 20px;
+}
+
+.fadeInUp {
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+  animation-name: fadeInUp;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.animated1 {
+  animation-duration: 1.5s;
+}
+
+.animated2 {
+  animation-duration: 2s;
+}
+
+.room-suites {
+  display: flex;
+  min-height: 40vh;
+  background-color: #ae825d;
+}
+
+.room-container-small {
+  display: flex;
+  min-width: 50%;
+}
+
+.rc-small {
+  min-width: calc(100% / 2);
+}
+
+.room-container-big {
+  min-width: 50%;
+  display: flex;
+}
+
+.room-layout {
+  display: flex;
+  padding: 2%;
+}
+
+.room-layout-img {
+  background-image: url(../image/homepage-image.jpg);
+  background-color: rgb(0, 0, 0, 0.2);
+  background-blend-mode: multiply;
+  background-position: center;
+  width: 100%;
+  background-size: cover;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.room-layout-text {
+  padding: 5%;
+}
+
+.room-layout-img:hover {
+  background-color: rgb(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
 }
