@@ -114,40 +114,60 @@ nav ul li a {
   transition: 0.5s;
 }
 
-.title {
-  font-size: 2rem;
-  line-height: 80px;
-  font-weight: 500;
+.header-title {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
 }
 
-.title-desc {
+.header-desc {
   font-size: 1rem;
-  line-height: 25px;
+  line-height: 30px;
   font-weight: 500;
 }
 
 .about-us {
   display: flex;
   justify-content: center;
-  min-height: 50vh;
+  min-height: 580px;
 }
 
 .about-container {
-  width: 90%;
-  margin-top: 50px;
+  width: 75%;
+  margin: 100px 60px;
   display: flex;
+  flex-direction: column;
+  flex-direction: row;
+}
+
+.about-content {
+  text-align: center;
+  width: calc(100% / 2);
+  display: flex;
+  justify-content: center;
   flex-direction: column;
 }
 
-.container {
-  padding: 32px;
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 980px;
+.about-title {
+  font-size: 3rem;
+  line-height: 80px;
+  font-weight: bold;
+  padding-bottom: 20px;
 }
 
-.container > table {
-  padding: 24px;
+.about-title span {
+  color: #ae825d;
+}
+
+.about-desc {
+  font-size: 1rem;
+  line-height: 30px;
+  font-weight: 500;
+  text-align: justify;
+}
+
+.about-img {
+  width: calc(100% / 2);
 }
 
 .footer {
