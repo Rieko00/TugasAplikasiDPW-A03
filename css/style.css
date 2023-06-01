@@ -126,7 +126,7 @@ nav ul li a {
   font-weight: 500;
 }
 
-.about-us {
+.about-section {
   display: flex;
   justify-content: center;
   min-height: 580px;
@@ -354,47 +354,108 @@ select {
   animation-duration: 2s;
 }
 
-.room-suites {
+.room-section {
   display: flex;
-  min-height: 40vh;
-  background-color: #ae825d;
+  flex-direction: column;
+  align-items: center;
+  margin: 5% 0;
 }
 
-.room-container-small {
+.room-header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.room-header span {
+  color: #ae825d;
+}
+
+.room-container {
+  width: 80%;
+  min-height: 400px !important;
   display: flex;
-  min-width: 50%;
+  flex-direction: row;
 }
 
-.rc-small {
-  min-width: calc(100% / 2);
-}
-
-.room-container-big {
-  min-width: 50%;
-  display: flex;
-}
-
-.room-layout {
-  display: flex;
-  padding: 2%;
-}
-
-.room-layout-img {
+.room-1 {
+  width: 30%;
   background-image: url(../image/homepage-image.jpg);
-  background-color: rgb(0, 0, 0, 0.2);
-  background-blend-mode: multiply;
-  background-position: center;
-  width: 100%;
-  background-size: cover;
-  cursor: pointer;
-  transition: 0.5s;
-}
-
-.room-layout-text {
-  padding: 5%;
-}
-
-.room-layout-img:hover {
   background-color: rgb(0, 0, 0, 0.5);
   background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+  margin-right: 12px;
+}
+
+.rc-right {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rc-right-top {
+  width: 100%;
+  height: calc(100% / 2);
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 6px;
+}
+
+.rc-right-bot {
+  width: 100%;
+  height: calc(100% / 2);
+  display: flex;
+  flex-direction: row;
+  margin-top: 6px;
+}
+
+.room-img-size {
+  width: calc(100% / 2);
+}
+
+.room-2 {
+  background-image: url(../image/homepage-image.jpg);
+  background-color: rgb(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+  margin-right: 6px;
+}
+.room-3 {
+  background-image: url(../image/homepage-image.jpg);
+  background-color: rgb(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+  margin-left: 6px;
+}
+.room-4 {
+  background-image: url(../image/homepage-image.jpg);
+  background-color: rgb(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+  margin-right: 6px;
+}
+.room-5 {
+  background-image: url(../image/homepage-image.jpg);
+  background-color: rgb(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+  margin-left: 6px;
+}
+
+.room-text-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  padding: 12px;
+}
+
+.room-title {
+  font-size: 1.2rem;
+  color: #ffffff;
+  font-weight: 500;
 }
