@@ -88,7 +88,6 @@ function isEmailFormat(inputValue) {
     return true ;
   } else {
     errorMsg.innerHTML = "Mohon isi email yang benar semisal: foo@example.com atau bar@example.nom.za" ;
-    errormsg.style.display = "block" ;
     return false ;
   }
 }
