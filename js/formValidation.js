@@ -1,4 +1,10 @@
 var errorMsg = document.querySelector(".error-msg");
+// Membuat variabel regExp terlebih dahulu
+ptRegExpTel = /^[+]\d{1}(?:[0-9\-\(\)\/\.]\s?){6, 15}[0-9]{1}$/ ;
+ptRegExpEmail = /^[\w-\.]+@+([\w-]+\.)+[\w-]{2,}$/g ;
+ptRegExpName = /^[a-zA-Z]$/ ;
+
+// Selanjutnya membuat fungsi untuk memvalidasi
 
 // cek apakah form sudah terisi
 function checkFill(inputValue) {
@@ -78,13 +84,12 @@ function isTelpFormat(inputValue) {
 // cek apakah isi form sudah sesuai dengan format email
 // diperbaiki oleh Github/Abyanu163
 function isEmailFormat(inputValue) {
-  ptRegExp = /^[\w-\.]+@+([\w-]+\.)+[\w-]{2,}$/g
-  if inputValue.match(ptRegExp) { // ptRegExt.test(inputValue)
-    return true;
+  if (inputValue.match(ptRegExpEmail)) {
+    return true ;
   } else {
-    errorMsg.innerHTML = "Mohon isi email yang benar semisal: foo@example.com atau bar@example.nom.za";
-    errormsg.style.display = "block";
-    return false;
+    errorMsg.innerHTML = "Mohon isi email yang benar semisal: foo@example.com atau bar@example.nom.za" ;
+    errormsg.style.display = "block" ;
+    return false ;
   }
 }
 
