@@ -76,24 +76,16 @@ function isTelpFormat(inputValue) {
 }
 
 // cek apakah isi form sudah sesuai dengan format email
+// diperbaiki oleh Github/Abyanu163
 function isEmailFormat(inputValue) {
-  if (inputValue.length < 13 ) {
+  ptRegExp = /^[\w-\.]+@+([\w-]+\.)+[\w-]{2,}$/g
+  if inputValue.match(ptRegExp) { // ptRegExt.test(inputValue)
+    return true;
+  } else {
+    errorMsg.innerHTML = "Mohon isi email yang benar semisal: foo@example.com atau bar@example.nom.za";
+    errormsg.style.display = "block";
     return false;
   }
-  pattern1 = /@/g;
-  pattern2 = ".com";
-  if (!(pattern1.test(inputValue))) {
-    return false;
-  }
-  let j = inputValue.length-1;
-  for (let i = pattern2.length-1; i >= 0; i-- ) {
-    if ( inputValue.charAt(j) != pattern2.charAt(i) ) {
-      return false;
-    }
-    j--;
-  }
-
-  return true;
 }
 
 // fungsi check setiap form
