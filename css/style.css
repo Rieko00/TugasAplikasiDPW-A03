@@ -47,7 +47,7 @@ html {
 
 body {
   font-family: poppins, Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #f5f3f4;
+  background-color: #f4f4f4;
 }
 
 nav {
@@ -82,6 +82,7 @@ nav {
 nav ul li a {
   color: brown;
   font-size: 1rem;
+  cursor: pointer;
 }
 
 #header-img {
@@ -134,7 +135,8 @@ nav ul li a {
 
 .about-container {
   width: 75%;
-  margin: 100px 60px;
+  margin: 140px 60px;
+  min-height: 380px;
   display: flex;
   flex-direction: column;
   flex-direction: row;
@@ -156,7 +158,7 @@ nav ul li a {
 }
 
 .about-title span {
-  color: #ae825d;
+  color: #895b48;
 }
 
 .about-desc {
@@ -166,8 +168,11 @@ nav ul li a {
   text-align: justify;
 }
 
-.about-img {
+.about-image {
+  background-image: url(../image/image2.png);
   width: calc(100% / 2);
+  background-position: center;
+  background-size: cover;
 }
 
 .footer {
@@ -193,10 +198,32 @@ nav ul li a {
   width: calc(100% / 3);
 }
 
+.footer-title {
+  font-size: 1.5rem;
+  color: #ae825d;
+  font-weight: 900;
+  margin-bottom: 20px;
+}
+
 .footer-contact {
   margin-right: 10px;
   border-right: 1px solid #f5f3f4;
   color: #f5f3f4;
+}
+
+.fc-title {
+  font-size: 1rem;
+  font-weight: 900;
+}
+.fc-desc {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.contact {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 30px;
 }
 
 .footer-links {
@@ -231,7 +258,7 @@ nav ul li a {
 }
 
 .form-container {
-  background-color: blue;
+  background-color: #ae825d;
   max-width: 900px;
   width: 100%;
   border-radius: 10px;
@@ -309,13 +336,14 @@ select {
   margin-top: 1.5rem;
   display: flex;
 }
+
 .btn-primary {
-  background-color: #ae825d;
+  background-color: #4a272e;
   color: white;
   margin-right: 10px;
   border-style: none;
   border-radius: 5px;
-  padding: 15px 20px;
+  padding: 12px 32px;
   font-size: 1rem;
   font-weight: 500;
 }
@@ -323,9 +351,8 @@ select {
 .btn-primary:hover {
   transition: 0.3s linear;
   color: white;
-  background-color: #4a272e;
+  background-color: #696d77;
   border-radius: 5px;
-  padding: 15px 20px;
 }
 
 .fadeInUp {
@@ -358,7 +385,6 @@ select {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 5% 0;
 }
 
 .room-header {
@@ -368,94 +394,173 @@ select {
 }
 
 .room-header span {
-  color: #ae825d;
+  color: #895b48;
 }
 
 .room-container {
-  width: 80%;
-  min-height: 400px !important;
+  width: 70%;
   display: flex;
   flex-direction: row;
+  margin-bottom: 30px;
 }
 
-.room-1 {
-  width: 30%;
-  background-image: url(../image/homepage-image.jpg);
-  background-color: rgb(0, 0, 0, 0.5);
-  background-blend-mode: multiply;
-  background-position: center;
-  background-size: cover;
-  margin-right: 12px;
+.rc-left {
+  width: calc(100% / 2 - 15px);
+  height: inherit;
+  margin-right: 15px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
 }
 
 .rc-right {
-  width: 70%;
+  width: calc(100% / 2 - 15px);
+  height: inherit;
+  margin-left: 15px;
   display: flex;
   flex-direction: column;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
 }
 
-.rc-right-top {
-  width: 100%;
-  height: calc(100% / 2);
-  display: flex;
-  flex-direction: row;
-  margin-bottom: 6px;
+.room-img-cont {
+  height: 250px;
+  margin: -10px;
+  border-radius: 5px;
 }
 
-.rc-right-bot {
-  width: 100%;
-  height: calc(100% / 2);
-  display: flex;
-  flex-direction: row;
-  margin-top: 6px;
-}
-
-.room-img-size {
-  width: calc(100% / 2);
-}
-
-.room-2 {
-  background-image: url(../image/homepage-image.jpg);
-  background-color: rgb(0, 0, 0, 0.5);
-  background-blend-mode: multiply;
-  background-position: center;
-  background-size: cover;
-  margin-right: 6px;
-}
-.room-3 {
-  background-image: url(../image/homepage-image.jpg);
-  background-color: rgb(0, 0, 0, 0.5);
-  background-blend-mode: multiply;
-  background-position: center;
-  background-size: cover;
-  margin-left: 6px;
-}
-.room-4 {
-  background-image: url(../image/homepage-image.jpg);
-  background-color: rgb(0, 0, 0, 0.5);
-  background-blend-mode: multiply;
-  background-position: center;
-  background-size: cover;
-  margin-right: 6px;
-}
-.room-5 {
-  background-image: url(../image/homepage-image.jpg);
-  background-color: rgb(0, 0, 0, 0.5);
-  background-blend-mode: multiply;
-  background-position: center;
-  background-size: cover;
-  margin-left: 6px;
-}
-
-.room-text-cont {
+.room-content-cont {
   display: flex;
   flex-direction: column;
-  justify-content: end;
-  padding: 12px;
+  padding: 20px;
 }
 
 .room-title {
-  font-size: 1.2rem;
-  color: #ffffff;
-  font-weight: 500;
+  font-size: 1.5rem;
+  color: #303030;
+  font-weight: 700;
+  margin-bottom: 10px;
+  margin-top: 15px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.room-desc {
+  font-size: 1rem;
+  color: #303030;
+  font-weight: 100;
+  text-align: justify;
+}
+
+.room-pricing-cont {
+  list-style: none;
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #303030;
+  font-weight: 400;
+  text-align: justify;
+  border-top: 2px solid #303030;
+}
+
+.room-price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.room-price div {
+  font-size: 1.5rem;
+  color: #303030;
+  font-weight: 400;
+}
+
+.room-1 {
+  background-image: url(../image/homepage-image.jpg);
+  background-color: rgb(0, 0, 0, 0.3);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+}
+
+.meeting-room-section {
+  min-height: 300px;
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 60px;
+  align-items: center;
+  flex-direction: column;
+}
+
+.meeting-room-header {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.meeting-room-header span {
+  color: #895b48;
+}
+
+.meeting-room-container {
+  width: 75%;
+  min-height: 350px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.mr-img-1 {
+  background-image: url(../image/meeting-room-7.jpg);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+}
+.mr-img-2 {
+  background-image: url(../image/meeting-room-6.jpg);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+}
+.mr-img-3 {
+  background-image: url(../image/meeting-room-5.jpg);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+}
+
+.mr-left {
+  justify-content: left;
+}
+
+.mr-right {
+  justify-content: right;
+}
+
+.mr-content {
+  width: 40%;
+  min-height: inherit;
+  padding: 25px;
+  background-color: rgba(74, 39, 46, 0.8);
+  color: #f5f3f4;
+  border-radius: 5px;
+  backdrop-filter: blur(7px);
+}
+
+.mr-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.mr-desc {
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: normal;
+  text-align: justify;
 }
