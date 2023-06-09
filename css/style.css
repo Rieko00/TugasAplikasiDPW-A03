@@ -332,6 +332,19 @@ select {
   border-radius: 5px;
 }
 
+/* pesan error form */
+.error-msg {
+  width: 50%;
+  font-size: 13px;
+  margin-top: 20px;
+  padding: 10px;
+  color: #820900;
+  border: 1px solid #820900;
+  background-color: rgba(255, 170, 170, 0.75);
+  border-radius: 8px;
+  display: none;
+}
+
 .button {
   margin-top: 1.5rem;
   display: flex;
