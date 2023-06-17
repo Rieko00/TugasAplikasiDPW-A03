@@ -1,79 +1,160 @@
 <!DOCTYPE html>
 <html lang="id">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
-    <title>Resort</title>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="css/evaluasi.css" >
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" >
+    <title>Evaluasi</title>
   </head>
   <body>
+    <!-- navbar menu -->
     <nav>
+      <button class="openbtn" onclick="openSidebar()">&#9776;</button>
       <div class="logo">
-        <img src="image/logo.png" width="50" height="50" alt="Logo" />
+        <img src="image/logo.png" alt="Logo" class="logo" >
       </div>
       <div class="navbar-link-container">
         <ul class="navbar-link">
-          <li class="navbar-item"><a href="./">Home</a></li>
-          <li class="navbar-item"><a href="./index.html#about-us">About</a></li>
-          <li class="navbar-item"><a href="#">Fasilitas</a></li>
-          <li class="navbar-item"><a href="#">TBA</a></li>
-          <li class="navbar-item"><a href="#">TBA</a></li>
-          <li class="navbar-item"><a href="Evaluasi.html">Evaluasi</a></li>
+          <li class="navbar-item"><a href="index.html">Home</a></li>
+          <li class="navbar-item"><a href="index.html#about-us">About</a></li>
+          <li class="navbar-item"><a href="index.html#room-suites">Room & Suites</a></li>
+          <li class="navbar-item"><a href="index.html#facilities">Facilities</a></li>
+          <li class="navbar-item"><a href="index.html#meeting-room">Meeting Room</a></li>
         </ul>
       </div>
+      <div class="book-now">
+        <a class="btn-primary" href="reservasi.html">Reservasi</a>
+      </div>
     </nav>
+    <!-- End Navbar Menu -->
+
+    <!-- Header section -->
     <div id="header-img" class="header-background">
       <div class="header-container">
         <div class="header-title">
-          <h1 class="title">Evaluasi // Evaluation</h1>
-          <p class="title-desc">
-            Di sini akan di balik hasil pekerjaan maupun kegiatan dalam tugas aplikasi DPW/DPL (Dasar Pemrograman Web/Laman)
+          <h1 class="header-title fadeInUp animated1">Evaluasi</h1>
+          <p class="header-desc fadeInUp animated2">
+            Di sini akan menampilkan ringkasan penjelasan kesesuaian website dari hasil pekerjaan kelompok (A_03) <br >
+            pembuatan TA DPW (Dasar Pemrograman Web)
           </p>
         </div>
       </div>
     </div>
-    <div class="content container">
-        <h1>//--- Pembagian kerja - Ringkasan pengecekan</h1>
-        <table>
-            <tr>
-                <th>Ihwal diamanahkan</th><th>Status</th>
-            </tr>
-            <tr>
-                <td>Kelengkapan section</td><td>Masih dilengkapi</td>
-            </tr>
-            <tr>
-                <td>Jumlah halaman</td><td>4 dalam lokal, 3 di Github</td>
-            </tr>
-            <tr>
-                <td>Berkas <code>index.html</code> dalam homepage (beranda)</td><td>OK</td>
-            </tr>
-            <tr>
-                <td>Form (pengisian) sesuai spesifikasi yang diamanahkan</td><td>-</td>
-            </tr>
-            <tr>
-                <td>Penerapan validasi form sesuai yang diamanahkan</td><td>-</td>
-            </tr>
-            <tr>
-                <td>Pesan galat sesuai spesifikasi</td><td>-</td>
-            </tr>
-            <tr>
-                <td>Kosistensi desain antar halaman (paling sulit)</td><td>Masih disesuaikan</td>
-            </tr>
-            <tr>
-                <td>Website (laman) sesuai tema yang diamanahkan</td><td>-</td>
-            </tr>
-        </table>
+    <!-- End Header section -->
+
+    <!-- sidebar section -->
+    <div id="sidebar" class="sidepanel">
+      <a class="closebtn" onclick="closeSidebar()">&times;</a>
+      <a href="#index.hmtl">Home</a>
+      <a href="index.html#about-us">About</a>
+      <a href="index.html#room-suites">Room & Suites</a>
+      <a href="index.html#facilities">Facilities</a>
+      <a href="index.html#meeting-room">Meeting Room</a>
+      <a href="reservasi.html">Reservasi</a>
+      <a href="evaluasi.html">Evaluasi</a>
+      <a href="about-us.html">About Us</a>
     </div>
+    <!-- end sidebar section -->
+
+    <!--tabel evaluasi section -->
+    <div class="evaluasi-container">
+      <h1>Ringkasan Evaluasi :</h1>
+      <table>
+        <tr>
+          <th>Evaluasi</th>
+          <th>Keterangan</th>
+        </tr>
+        <tr>
+          <td>Kelengkapan section</td>
+          <td>Ada 5 section (Header, Menu, Content, Sidebar, dan Footer)</td>
+        </tr>
+        <tr>
+          <td>Kelengkapan jumlah halaman</td>
+          <td>4 halaman web</td>
+        </tr>
+        <tr>
+          <td>Kesesuaian nama file untuk halaman utama "Homepage"</td>
+          <td><code>index.html</code></td>
+        </tr>
+        <tr>
+          <td>Kelengkapan penggunaan elemen HTML form yang di gunakan sebagai field masukan</td>
+          <td>Textbox, Dropdown menu, dan Submit button</td>
+        </tr>
+        <tr>
+          <td>Kelengkapan penerapan (jenis) validasi form</td>
+          <td>Ada 6 jenis validasi (masukan wajib, numerik, alfabet, email, panjang digit, panjang karakter, dan masukan tanggal)</td>
+        </tr>
+        <tr>
+          <td>Kesesuaian pesan error validasi form</td>
+          <td>Menampilkan pesan kesalahan kepada user saat terjadi kesalahan input.</td>
+        </tr>
+        <tr>
+          <td>Konsistensi desain antar halaman</td>
+          <td>Sesuai</td>
+        </tr>
+        <tr>
+          <td>Kesesuaian website terhadap tema</td>
+          <td>sesuai (akomodasi penginapan)</td>
+        </tr>
+      </table>
+    </div>
+    <!--tabel evaluasi section -->
+
+    <!-- footer section -->
     <div class="footer">
-      <div class="footer-credit footer-container">
-        <div class="credit-container">
-          <div class="credit">
-            Copyright Djangga Selecta Resort.<br/>
-            1444/2023 Dibuat oleh Tim Dasar Pemrograman Laman Kelompok A_03
+      <div class="footer-container">
+        <div class="footer-section">
+          <div class="footer-contact footer-sizing">
+            <div class="footer-header">Contact</div>
+            <div class="footer-title">Djangga Selecta Resort</div>
+            <div class="footer-desc">
+              Jl. Pangeran Diponegoro No.184, Tulungrejo <br >
+              Kec. Bumiaji, Kota Batu, Jawa Timur 65336
+            </div>
+            <div class="contact">
+              <div class="contact-tel">+62 822 3244 9038</div>
+              <div class="contact-mail">contact@djanggaselectaresort.com</div>
+            </div>
+          </div>
+          <div class="footer-links footer-sizing">
+            <div class="footer-header">Menu</div>
+            <ul>
+              <li class="navbar-item"><a href="index.html">Home</a></li>
+              <li class="navbar-item"><a href="index.html#about-us">About</a></li>
+              <li class="navbar-item"><a href="index.html#room-suites">Room and Suites</a></li>
+              <li class="navbar-item"><a href="index.html#facilities">Facilities</a></li>
+              <li class="navbar-item"><a href="index.html#meeting-room">Meeting Room</a></li>
+            </ul>
+          </div>
+          <div class="footer-socialmed footer-sizing">
+            <div class="footer-header">Follow Us</div>
+            <div class="socialmed-cont">
+              <img class="socialmed-logo" src="image/instagram-logo.png" alt="instragram" >
+              <div class="footer-desc">@DjanggaSelecta_Resort</div>
+            </div>
+            <div class="socialmed-cont">
+              <img class="socialmed-logo" src="image/facebook-logo.png" alt="instragram" >
+              <div class="footer-desc">@DjanggaSelecta_Resort</div>
+            </div>
+            <div class="socialmed-cont">
+              <img class="socialmed-logo" src="image/youtube-logo.png" alt="instragram" >
+              <div class="footer-desc">@DjanggaSelecta_Resort</div>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="footer-credit">
+        <div class="credit-container">
+          <div class="credit">Copyright Djangga Selecta Resort 2023</div>
+          <div class="credit">
+            Dibuat Oleh Kelompok A-03 <span><a href="about-us.html">About us</a><a href="evaluasi.html">Evaluasi</a></span>
+          </div>
         </div>
       </div>
     </div>
+    <!-- footer section -->
+    <script src="js/script.js"></script>
   </body>
 </html>

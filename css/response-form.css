@@ -1,0 +1,46 @@
+.response-form-img {
+  background-image: url(../image/homepage-image.jpg);
+  background-color: rgb(0, 0, 0, 0.66);
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+}
+
+.response-form {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  margin-bottom: 10vh;
+}
+
+.response-form-container {
+  width: 75%;
+  height: 70vh;
+  color: white;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  transition: 0.5s;
+  background-color: #4a272e;
+}
+
+.rf-title {
+  font-size: 3.5rem;
+  font-family: dancingScript, Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.rf-desc {
+  font-family: poppins, Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1rem;
+  line-height: 30px;
+  font-weight: 500;
+}

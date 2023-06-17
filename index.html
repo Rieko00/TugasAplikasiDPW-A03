@@ -1,42 +1,64 @@
 <!DOCTYPE html>
 <html lang="id">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="css/style.css" >
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" >
     <title>Djangga Selecta Resort</title>
   </head>
   <body>
+    <!-- Navbar Menu -->
     <nav>
+      <button class="openbtn" onclick="openSidebar()">&#9776;</button>
       <div class="logo">
-        <img src="image/logo.png" width="50" height="50" alt="Logo" />
+        <img src="image/logo.png" alt="Logo" class="logo" >
       </div>
       <div class="navbar-link-container">
         <ul class="navbar-link">
           <li class="navbar-item"><a href="index.html">Home</a></li>
-          <li class="navbar-item"><a onclick="scrollToTargetAdjusted('about-us', 75)" href="#about-us">About</a></li>
-          <li class="navbar-item"><a onclick="scrollToTargetAdjusted('room-suite', 75)">Room and Suites</a></li>
-          <li class="navbar-item"><a onclick="scrollToTargetAdjusted('about-us',)">Facilities</a></li>
-          <li class="navbar-item"><a onclick="scrollToTargetAdjusted('meeting-room', 75)">Meeting Room</a></li>
+          <li class="navbar-item"><a href="#about-us">About</a></li>
+          <li class="navbar-item"><a href="#room-suites">Room & Suites</a></li>
+          <li class="navbar-item"><a href="#facilities">Facilities</a></li>
+          <li class="navbar-item"><a href="#meeting-room">Meeting Room</a></li>
         </ul>
       </div>
       <div class="book-now">
         <a class="btn-primary" href="reservasi.html">Reservasi</a>
       </div>
     </nav>
+    <!-- End Navbar Menu -->
+
+    <!-- Header section -->
     <div id="header-img" class="header-background">
       <div class="header-container">
         <div class="header-title">
           <h1 class="header-title fadeInUp animated1">Djangga Selecta Resort</h1>
           <p class="header-desc fadeInUp animated2">
-            Welcome to The Djangga Selecta Resort.<br />
-            A perfect blend of Indonesian culture, traditions, lifestyle and beauty. <br />
-            A warm smile and impeccable service of The The Djangga Selecta Resort always accompany you during your stay with us.
+            Selamat Datang di Djangga selecta Resort. <br >
+            Perpaduan sempurna antara budaya, gaya hidup, dan keindahan Indonesia. <br >
+            Senyum hangat dan pelayanan sempurna Djangga selecta Resort selalu menemani Anda selama Anda tinggal bersama kami.
           </p>
         </div>
       </div>
     </div>
+    <!-- End Header section -->
+
+    <!-- Sidebar section -->
+    <div id="sidebar" class="sidepanel">
+      <a class="closebtn" onclick="closeSidebar()">&times;</a>
+      <a href="#index.hmtl">Home</a>
+      <a href="#about-us">About</a>
+      <a href="#room-suites">Room & Suites</a>
+      <a href="#facilities">Facilities</a>
+      <a href="#meeting-room">Meeting Room</a>
+      <a href="reservasi.html">Reservasi</a>
+      <a href="evaluasi.html">Evaluasi</a>
+      <a href="about-us.html">About Us</a>
+    </div>
+    <!-- End sidebar section -->
+
+    <!-- about section -->
     <div class="about-section" id="about-us">
       <div class="about-container">
         <div class="about-content">
@@ -46,41 +68,44 @@
             dan kota Pujon. Dengan pemandangan taman yang rimbun dan perkebunan tropis, Djangga Selecta Resort Batu, menyambut para tamu dengan alam yang indah dan suasana keramahan Jawa Timur.
           </p>
         </div>
-        <div class="about-image"></div>
+        <img src="image/image2.png" alt="about-img" class="about-image" >
       </div>
     </div>
-    <div class="room-section" id="room-suite">
-      <div class="room-header">Room and <span>Suites</span></div>
+    <!-- end About Section -->
+
+    <!-- Room & Suites Section -->
+    <div class="room-section" id="room-suites">
+      <div class="room-header">Room & <span>Suites</span></div>
       <div class="room-container">
-        <div class="rc-left rc-shadow">
-          <div class="room-img-cont room-1"></div>
+        <div class="rc-left">
+          <img src="image/deluxe-room.jpg" alt="deluxe-room" class="room-img-cont" >
           <div class="room-content-cont">
-            <div class="room-title">Dulaxe room</div>
+            <div class="room-title">Deluxe room</div>
             <div class="room-desc">
-              Kamar kontemporer dilengkapi dengan satu tempat tidur double atau dua tempat tidur single, TV layar LCD 27" dengan saluran satelit, AC individu, lemari, kamar mandi, akses internet, dan balkon pribadi. Kamar seluas 20m² ini
-              menghadap ke pemandangan Gunung kukusan yang indah.
+              Kamar kontemporer dilengkapi dengan satu tempat tidur double atau dua tempat tidur single, TV LCD dengan saluran satelit, AC individu, lemari, kamar mandi, akses internet, dan balkon pribadi. Kamar seluas 20m² ini menghadap ke
+              pemandangan Gunung kukusan yang indah.
             </div>
             <div class="room-pricing-cont">
               <div class="room-title">Start From</div>
               <div class="room-price">
-                <div>Rp. 399.000</div>
+                <div>Rp. 799.000</div>
                 <a class="btn-primary" href="reservasi.html">Reservasi</a>
               </div>
             </div>
           </div>
         </div>
         <div class="rc-right">
-          <div class="room-img-cont room-1"></div>
+          <img src="image/premier-vvip.jpg" alt="Premium-Room" class="room-img-cont" >
           <div class="room-content-cont">
-            <div class="room-title">Dulaxe room</div>
+            <div class="room-title">Suite Premium Room</div>
             <div class="room-desc">
-              Kamar kontemporer dilengkapi dengan satu tempat tidur double atau dua tempat tidur single, TV layar LCD 27" dengan saluran satelit, AC individu, lemari, kamar mandi, akses internet, dan balkon pribadi. Kamar seluas 20m² ini
-              menghadap ke pemandangan Gunung kukusan yang indah.
+              Kamar paling eksklusif dilengkapi dengan satu tempat tidur king dan ruang tamu, TV ayer LCD 55” dengan saluran satelit, lemari, AC individu, kamar mandi marmer dengan shower terpisah, akses internet, balkon pribadi, dan meja
+              makan yang indah. Kamar seluas 60m² ini menghadap ke pemandangan Gunung biru dan Gunung kukusan yang menakjubkan.
             </div>
             <div class="room-pricing-cont">
               <div class="room-title">Start From</div>
               <div class="room-price">
-                <div>Rp. 399.000</div>
+                <div>Rp. 1.099.000</div>
                 <a class="btn-primary" href="reservasi.html">Reservasi</a>
               </div>
             </div>
@@ -88,35 +113,35 @@
         </div>
       </div>
       <div class="room-container">
-        <div class="rc-left rc-shadow">
-          <div class="room-img-cont room-1"></div>
+        <div class="rc-left">
+          <img src="image/family-room.jpg" alt="Family-room" class="room-img-cont" >
           <div class="room-content-cont">
-            <div class="room-title">Dulaxe room</div>
+            <div class="room-title">Family room</div>
             <div class="room-desc">
-              Kamar kontemporer dilengkapi dengan satu tempat tidur double atau dua tempat tidur single, TV layar LCD 27" dengan saluran satelit, AC individu, lemari, kamar mandi, akses internet, dan balkon pribadi. Kamar seluas 20m² ini
-              menghadap ke pemandangan Gunung kukusan yang indah.
+              Didedikasikan untuk keluarga dengan anak-anak, kamar ini dilengkapi dengan satu tempat tidur king dan dua tempat tidur sofa, lemari, TV LCD dengan saluran satelit, AC individu, kamar mandi marmer dengan shower terpisah, akses
+              internet, dan balkon pribadi. Kamar seluas 52m² ini kamar menghadap pemandangan Gunung arjuna yang indah.
             </div>
             <div class="room-pricing-cont">
               <div class="room-title">Start From</div>
               <div class="room-price">
-                <div>Rp. 399.000</div>
+                <div>Rp. 699.000</div>
                 <a class="btn-primary" href="reservasi.html">Reservasi</a>
               </div>
             </div>
           </div>
         </div>
         <div class="rc-right">
-          <div class="room-img-cont room-1"></div>
+          <img src="image/pool-view-room.jpg" alt="pool-view-room" class="room-img-cont" >
           <div class="room-content-cont">
-            <div class="room-title">Dulaxe room</div>
+            <div class="room-title">Pool Access Room</div>
             <div class="room-desc">
-              Kamar kontemporer dilengkapi dengan satu tempat tidur double atau dua tempat tidur single, TV layar LCD 27" dengan saluran satelit, AC individu, lemari, kamar mandi, akses internet, dan balkon pribadi. Kamar seluas 20m² ini
-              menghadap ke pemandangan Gunung kukusan yang indah.
+              Nikmati kamar yang lebih besar dilengkapi dengan satu tempat tidur ganda atau dua tempat tidur tunggal, TV LCD” dengan saluran satelit, lemari, AC individu, kamar mandi marmer dengan bak mandi, akses internet dan balkon
+              pribadi dengan akses kolam renang. Kamar seluas 52m² ini memiliki akses langsung eksklusif ke kolam renang. Dengan nuansa keindahan Gunung arjuna
             </div>
             <div class="room-pricing-cont">
               <div class="room-title">Start From</div>
               <div class="room-price">
-                <div>Rp. 399.000</div>
+                <div>Rp. 899.000</div>
                 <a class="btn-primary" href="reservasi.html">Reservasi</a>
               </div>
             </div>
@@ -124,9 +149,51 @@
         </div>
       </div>
     </div>
-    <div class="facilites-section">
-      <div class="facilities-container"></div>
+    <!-- end Room Section -->
+
+    <!-- Facilities Section -->
+    <div class="facilities-section" id="facilities">
+      <div class="facilities-header">Facilities</div>
+      <div class="facilities-container">
+        <div class="fc-cont-small fc-content">
+          <div class="fc-title">Swimming Pool</div>
+          <div class="fc-desc">Resort kami memiliki 2 kolam renang utama, kolam untuk dewasa dan anak-anak</div>
+        </div>
+        <div class="fc-cont-medium fc-image-1"></div>
+      </div>
+      <div class="facilities-container">
+        <div class="fc-cont-medium fc-image-2"></div>
+        <div class="fc-cont-small fc-content">
+          <div class="fc-title">Fitness Center</div>
+          <div class="fc-desc">Fitness Center kami dilengkapi dengan beberapa peralatan olahraga untuk para tamu.</div>
+        </div>
+      </div>
+      <div class="facilities-container">
+        <div class="fc-cont-big fc-image-3">
+          <div class="fc-cont-big-content fc-content">
+            <div class="fc-title">Spa & Beauty Center</div>
+            <div class="fc-desc">Resort kami juga memiliki Spa Room dan Salon Kecantikan. Pilihan perawatan yang terinspirasi dari perawatan tradisional Asia</div>
+          </div>
+        </div>
+      </div>
+      <div class="facilities-container">
+        <div class="fc-cont-small fc-content">
+          <div class="fc-title">The Restaurant</div>
+          <div class="fc-desc">Menyediakan berbagai masakan lokal dan internasional. Kami juga akan memanjakan Anda dengan hidangan otentik Kota Batu.</div>
+        </div>
+        <div class="fc-cont-medium fc-image-4"></div>
+      </div>
+      <div class="facilities-container">
+        <div class="fc-cont-medium fc-image-5"></div>
+        <div class="fc-cont-small fc-content">
+          <div class="fc-title">Sky Lounge</div>
+          <div class="fc-desc">Dengan pemandangan pegunungan dan kehijauan Kota Batu, Sky Lounge sangat cocok untuk menikmati secangkir kopi dan makanan ringan sambil menikmati lingkungan sekitar.</div>
+        </div>
+      </div>
     </div>
+    <!-- end Facilities Section -->
+
+    <!-- Meeting Room Section -->
     <div class="meeting-room-section" id="meeting-room">
       <div class="meeting-room-header"><span>Exclusive </span>Meeting Room</div>
       <div class="meeting-room-container mr-right mr-img-1">
@@ -157,32 +224,61 @@
         </div>
       </div>
     </div>
+    <!-- End Meeting Room Section -->
+
+    <!-- Footer Section -->
     <div class="footer">
       <div class="footer-container">
         <div class="footer-section">
           <div class="footer-contact footer-sizing">
-            <div class="footer-title">Contact</div>
-            <div class="fc-title">Djangga Selecta Resort</div>
-            <div class="fc-desc">
-              Jl. Pangeran Diponegoro No.184, Tulungrejo <br />
+            <div class="footer-header">Contact</div>
+            <div class="footer-title">Djangga Selecta Resort</div>
+            <div class="footer-desc">
+              Jl. Pangeran Diponegoro No.184, Tulungrejo <br >
               Kec. Bumiaji, Kota Batu, Jawa Timur 65336
             </div>
             <div class="contact">
               <div class="contact-tel">+62 822 3244 9038</div>
-              <div class="contact-wa">+62 822 3244 9038</div>
-              <div class="contact-mail">contact@djanggaselecta.com</div>
+              <div class="contact-mail">contact@djanggaselectaresort.com</div>
             </div>
           </div>
-          <div class="footer-links footer-sizing">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, nisi.</div>
-          <div class="footer-socialmed footer-sizing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, dicta.</div>
+          <div class="footer-links footer-sizing">
+            <div class="footer-header">Menu</div>
+            <ul>
+              <li class="navbar-item"><a href="index.html">Home</a></li>
+              <li class="navbar-item"><a href="#about-us">About</a></li>
+              <li class="navbar-item"><a href="#room-suites">Room and Suites</a></li>
+              <li class="navbar-item"><a href="#facilities">Facilities</a></li>
+              <li class="navbar-item"><a href="#meeting-room">Meeting Room</a></li>
+            </ul>
+          </div>
+          <div class="footer-socialmed footer-sizing">
+            <div class="footer-header">Follow Us</div>
+            <div class="socialmed-cont">
+              <img class="socialmed-logo" src="image/instagram-logo.png" alt="instragram" >
+              <div class="footer-desc">@DjanggaSelecta_Resort</div>
+            </div>
+            <div class="socialmed-cont">
+              <img class="socialmed-logo" src="image/facebook-logo.png" alt="instragram" >
+              <div class="footer-desc">@DjanggaSelecta_Resort</div>
+            </div>
+            <div class="socialmed-cont">
+              <img class="socialmed-logo" src="image/youtube-logo.png" alt="instragram" >
+              <div class="footer-desc">@DjanggaSelecta_Resort</div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="footer-credit">
         <div class="credit-container">
-          <div class="credit">Copyright Djangga Selecta Resort</div>
+          <div class="credit">Copyright Djangga Selecta Resort 2023</div>
+          <div class="credit">
+            Dibuat Oleh Kelompok A-03 <span><a href="about-us.html">About us</a><a href="evaluasi.html">Evaluasi</a></span>
+          </div>
         </div>
       </div>
     </div>
+    <!-- End footer Section -->
     <script src="js/script.js"></script>
   </body>
 </html>

@@ -1,146 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="shortcut icon" href="/image/favicon.ico" type="image/x-icon" />
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link rel="stylesheet" href="css/style.css" >
+    <link rel="stylesheet" href="css/form.css" >
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon" >
     <title>Djangga Selecta Resort</title>
   </head>
   <body>
+    <!-- navbar menu -->
     <nav>
+      <button class="openbtn" onclick="openSidebar()">&#9776;</button>
       <div class="logo">
-        <img src="image/logo.png" width="50" height="50" alt="Logo" />
+        <img src="image/logo.png" alt="Logo" class="logo" >
       </div>
       <div class="navbar-link-container">
         <ul class="navbar-link">
           <li class="navbar-item"><a href="index.html">Home</a></li>
           <li class="navbar-item"><a href="index.html#about-us">About</a></li>
-          <li class="navbar-item"><a href="#">Fasilitas</a></li>
-          <li class="navbar-item"><a href="#">Reservasi</a></li>
-          <li class="navbar-item"><a href="#">Reservasi</a></li>
-          <li class="navbar-item"><a href="#">Reservasi</a></li>
+          <li class="navbar-item"><a href="index.html#room-suites">Room & Suites</a></li>
+          <li class="navbar-item"><a href="index.html#facilities">Facilities</a></li>
+          <li class="navbar-item"><a href="index.html#meeting-room">Meeting Room</a></li>
         </ul>
       </div>
       <div class="book-now">
         <a class="btn-primary" href="reservasi.html">Reservasi</a>
       </div>
     </nav>
+    <!-- end Navbar Menu -->
+
+    <!--  sidebar section -->
+    <div id="sidebar" class="sidepanel">
+      <a class="closebtn" onclick="closeSidebar()">&times;</a>
+      <a href="#index.hmtl">Home</a>
+      <a href="index.html#about-us">About</a>
+      <a href="index.html#room-suites">Room & Suites</a>
+      <a href="index.html#facilities">Facilities</a>
+      <a href="index.html#meeting-room">Meeting Room</a>
+      <a href="reservasi.html">Reservasi</a>
+      <a href="evaluasi.html">Evaluasi</a>
+      <a href="about-us.html">About Us</a>
+    </div>
+    <!--  end sidebar section -->
+
+    <!-- form section -->
     <div class="form-reservasi">
       <div class="form-container">
-        <header class="form-header">Reservasi</header>
-        <form action="#" method="post" onsubmit="return formValidation()">
-          <div class="form-title">
-            <span class="form-details">Personal Detail</span>
-            <div class="form-fields">
-              <div class="input-field">
-                <label for="name">Nama Lengkap</label>
-                <input type="text" name="name" id="name" placeholder="Masukan Nama Anda" />
-              </div>
-              <div class="input-field">
-                <label for="email">Email</label>
-                <input type="text" name="email" id="email" placeholder="Email" />
-              </div>
-              <div class="input-field">
-                <label for="telepon">Nomor Telepon</label>
-                <input type="text" name="telepon" id="telepon" placeholder="Nomor Telepon" />
-              </div>
-              <div class="input-field">
-                <label for="nationality">Nationality</label>
-                <select id="nationality">
-                  <option disabled selected>Select Nationality</option>
-                  <option>WNI</option>
-                  <option>WNA / Asing</option>
-                </select>
-              </div>
-              <div class="input-field">
-                <label for="id-type-PD">Id type</label>
-                <select id="id-type-PD">
-                  <option disabled selected>Select Id Type</option>
-                  <option>Identity Card</option>
-                  <option>Driver Lisence</option>
-                  <option>Pasport</option>
-                  <option>Others</option>
-                </select>
-              </div>
-              <div class="input-field">
-                <label for="id-num-PD">ID number</label>
-                <input type="text" name="id-num" id="id-num-PD" placeholder="Enter ID Number" />
-              </div>
-            </div>
-          </div>
-          <div class="form-title">
-            <span class="form-details">Book Detail</span>
-            <div class="form-fields">
-              <div class="input-field">
-                <label for="room-type">Room Type</label>
-                <select id="room-type">
-                  <option disabled selected>Select Room Type</option>
-                  <option>Room 1</option>
-                  <option>Room 2</option>
-                  <option>Room 3</option>
-                  <option>Room 4</option>
-                </select>
-              </div>
-              <div class="input-field">
-                <label for="check-in">Check-in</label>
-                <input type="date" id="check-in" />
-              </div>
-              <div class="input-field">
-                <label for="check-out">Check-out</label>
-                <input type="date" id="check-out" />
-              </div>
-              <div class="input-field">
-                <label for="add-service">Additional Service</label>
-                <select id="add-service">
-                  <option disabled selected>Select Additional Service</option>
-                  <option>accomodation only</option>
-                  <option>Breakfast set</option>
-                  <option>Premium Service</option>
-                </select>
-              </div>
-              <div class="input-field">
-                <label for="id-type-BD">Id type</label>
-                <select id="id-type-BD">
-                  <option disabled selected>Select Id Type</option>
-                  <option>Identity Card</option>
-                  <option>Driver Lisence</option>
-                  <option>Pasport</option>
-                  <option>Others</option>
-                </select>
-              </div>
-              <div class="input-field">
-                <label for="id-num-BD">ID number</label>
-                <input type="text" name="id-num" id="id-num-BD" placeholder="Enter ID Number" />
-              </div>
-              <div class="error-msg"></div>
-              <div class="button">
-                <a class="btn-primary" href="index.html">Kembali Ke Halaman Utama</a>
-                <button class="btn btn-primary" type="reset">Reset</button>
-                <button class="btn btn-primary" type="submit">Kirim</button>
+        <div class="form-img-cont">
+          <img class="logo-big" src="image/logo.png" alt="logo" >
+        </div>
+        <div class="form-section">
+          <header class="form-header">Reservasi</header>
+          <form action="response-form.html" method="post" name="reservation" onsubmit="return formValidation()">
+            <div class="form-title">
+              <span class="form-details">Personal Detail</span>
+              <div class="form-fields">
+                <div class="input-field">
+                  <label for="name">Nama Lengkap</label>
+                  <input type="text" name="name" id="name" placeholder="Masukan Nama Anda" >
+                  <div class="error-name"></div>
+                </div>
+                <div class="input-field">
+                  <label for="email">Email</label>
+                  <input type="text" name="email" id="email" placeholder="Email" >
+                  <div class="error-email"></div>
+                </div>
+                <div class="input-field">
+                  <label for="telepon">Nomor Telepon</label>
+                  <input type="text" name="telepon" id="telepon" placeholder="Nomor Telepon" >
+                  <div class="error-tel"></div>
+                </div>
+                <div class="input-field">
+                  <label for="nationality">Nationality</label>
+                  <select id="nationality">
+                    <option disabled selected>Select Nationality</option>
+                    <option>WNI</option>
+                    <option>WNA / Asing</option>
+                  </select>
+                  <div class="error-nat"></div>
+                </div>
+                <div class="input-field">
+                  <label for="id-type">Id type</label>
+                  <select id="id-type">
+                    <option disabled selected>Select Id Type</option>
+                    <option>Identity Card</option>
+                    <option>Driver Lisence</option>
+                    <option>Pasport</option>
+                    <option>Others</option>
+                  </select>
+                  <div class="error-idtype"></div>
+                </div>
+                <div class="input-field">
+                  <label for="id-num">ID number</label>
+                  <input type="text" name="id-num" id="id-num" placeholder="Enter ID Number" >
+                  <div class="error-idnum"></div>
+                </div>
               </div>
             </div>
-          </div>
-        </form>
+            <div class="form-title">
+              <span class="form-details">Book Detail</span>
+              <div class="form-fields">
+                <div class="input-field">
+                  <label for="room-type">Room Type</label>
+                  <select id="room-type">
+                    <option disabled selected>Select Room Type</option>
+                    <option>Deluxe Room</option>
+                    <option>Suite Premium Room</option>
+                    <option>Family Room</option>
+                    <option>Pool View Room</option>
+                  </select>
+                  <div class="error-roomtype"></div>
+                </div>
+                <div class="input-field">
+                  <label for="add-service">Additional Service</label>
+                  <select id="add-service">
+                    <option disabled selected>Select Additional Service</option>
+                    <option>Kurupati Meeting Room</option>
+                    <option>Dananjaya Meeting Room</option>
+                    <option>Swetawira Meeting Room</option>
+                  </select>
+                  <div class="error-addservice"></div>
+                </div>
+                <div class="input-field">
+                  <label for="check-in">Check-in</label>
+                  <input type="date" id="check-in" >
+                  <div class="error-checkin"></div>
+                </div>
+                <div class="input-field">
+                  <label for="check-out">Check-out</label>
+                  <input type="date" id="check-out" >
+                  <div class="error-checkout"></div>
+                </div>
+                <div class="input-field-textarea">
+                  <label for="keterangan">Keterangan Tambahan</label>
+                  <textarea name="keterangan" id="keterangan" rows="3" placeholder="Keterangan Tambahan Mengenai Reservasi Anda"></textarea>
+                </div>
+                <div class="radio-button-cont">
+                  <div class="radio-button-title">Invoice Akan Dikirimkan Melalui :</div>
+                  <div class="radio-button-field">
+                    <label class="radio-button">
+                      <input type="radio" name="radio" >
+                      <span>Email</span>
+                    </label>
+                    <label class="radio-button">
+                      <input type="radio" name="radio" >
+                      <span>Nomor Telepon</span>
+                    </label>
+                  </div>
+                  <div class="error-radio"></div>
+                </div>
+                <div class="check-box-cont">
+                  <label class="check-box">
+                    <input type="checkbox" name="checkbox" >
+                    Setuju Dengan Syarat Dan Ketentuan Yang Berlaku
+                  </label>
+                  <div class="error-checkbox"></div>
+                </div>
+                <div class="error-msg"></div>
+                <div class="form-btn-cont">
+                  <a class="btn-form" href="index.html">Kembali Ke Halaman Utama</a>
+                  <button class="btn-form" type="reset">Reset</button>
+                  <button class="btn-form" type="submit">Kirim</button>
+                </div>
+              </div>
+            </div>
+          </form>
+        </div>
       </div>
     </div>
+    <!-- end form section -->
+
+    <!--footer section -->
     <div class="footer">
       <div class="footer-container">
         <div class="footer-section">
           <div class="footer-contact footer-sizing">
-            <div class="alamat">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo, nihil.</div>
+            <div class="footer-header">Contact</div>
+            <div class="footer-title">Djangga Selecta Resort</div>
+            <div class="footer-desc">
+              Jl. Pangeran Diponegoro No.184, Tulungrejo <br >
+              Kec. Bumiaji, Kota Batu, Jawa Timur 65336
+            </div>
+            <div class="contact">
+              <div class="contact-tel">+62 822 3244 9038</div>
+              <div class="contact-mail">contact@djanggaselectaresort.com</div>
+            </div>
           </div>
-          <div class="footer-links footer-sizing">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, nisi.</div>
-          <div class="footer-socialmed footer-sizing">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, dicta.</div>
+          <div class="footer-links footer-sizing">
+            <div class="footer-header">Menu</div>
+            <ul>
+              <li class="navbar-item"><a href="index.html">Home</a></li>
+              <li class="navbar-item"><a href="index.html#about-us">About</a></li>
+              <li class="navbar-item"><a href="index.html#room-suites">Room and Suites</a></li>
+              <li class="navbar-item"><a href="index.html#facilities">Facilities</a></li>
+              <li class="navbar-item"><a href="index.html#meeting-room">Meeting Room</a></li>
+            </ul>
+          </div>
+          <div class="footer-socialmed footer-sizing">
+            <div class="footer-header">Follow Us</div>
+            <div class="socialmed-cont">
+              <img class="socialmed-logo" src="image/instagram-logo.png" alt="instragram" >
+              <div class="footer-desc">@DjanggaSelecta_Resort</div>
+            </div>
+            <div class="socialmed-cont">
+              <img class="socialmed-logo" src="image/facebook-logo.png" alt="instragram" >
+              <div class="footer-desc">@DjanggaSelecta_Resort</div>
+            </div>
+            <div class="socialmed-cont">
+              <img class="socialmed-logo" src="image/youtube-logo.png" alt="instragram" >
+              <div class="footer-desc">@DjanggaSelecta_Resort</div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="footer-credit">
         <div class="credit-container">
-          <div class="credit">Copyright Djangga Selecta Resort</div>
+          <div class="credit">Copyright Djangga Selecta Resort 2023</div>
+          <div class="credit">
+            Dibuat Oleh Kelompok A-03 <span><a href="about-us.html">About us</a><a href="evaluasi.html">Evaluasi</a></span>
+          </div>
         </div>
       </div>
     </div>
+    <!-- end footer section -->
     <script src="js/script.js"></script>
-    <script src="js/formValidation.js"></script>
   </body>
 </html>
